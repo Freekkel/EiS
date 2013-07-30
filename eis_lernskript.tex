@@ -1,0 +1,80 @@
+\documentclass[a4paper,10pt]{scrbook}
+\usepackage{etex}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[german,figure,linesnumbered,lined]{algorithm2e}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{latexsym}
+\usepackage{longtable}
+\usepackage{latexsym}
+\usepackage{enumitem}
+\usepackage{pstricks}
+\usepackage{stmaryrd}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{linearb}
+\usepackage{titlesec}
+\usepackage{listings}
+
+
+%Mehr Raum zwischen subsections
+\titlespacing{\section}{0pt}{*4}{*2.5}
+\titlespacing{\subsection}{0pt}{*3.5}{*1.5}
+
+% kleine Anpassungen, damit die Seitenbreite überall außer Titel gleich ist.
+\setcounter{secnumdepth}{2}
+\setlength{\textwidth}{160mm}
+\setlength{\textheight}{220mm}
+\setlength{\headheight}{3mm}
+\evensidemargin1mm
+\oddsidemargin1mm
+
+%Java Anpassungen
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=1,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+
+
+%Subsections werden hiermit nicht in das Inhaltsverzeichnis übernommen
+\setcounter{tocdepth}{1}
+
+
+%Dokumentenanfang mit diversen input von mehreren Einzeldokumenten.
+\begin{document}
+	\input{front/title} 
+	
+	\frontmatter 
+		\input{frontmatter/table_of_contents} 
+	 
+	\mainmatter 
+		\input{mainmatter/vorlesung}
+\end {document}
