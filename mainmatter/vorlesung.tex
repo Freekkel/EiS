@@ -61,6 +61,11 @@ class Color
  %
  \section{Design Pattern}
 \subsection{Observer-Pattern}
+Allgemein finden Observer Anwendung, wenn eine Abstraktion mehrere Aspekte hat, die von einem anderen Aspekt derselben Abstraktion abhängen, die Änderung eines Objekts Änderungen an anderen Objekten nach sich zieht oder ein Objekt andere Objekte benachrichtigen soll, ohne diese im Detail zu kennen.
+
+\begin{figure}[H]
+\includegraphics[width = 15cm]{mainmatter/pics/Observer.png}
+\end{figure}
 
 \subsection{Decorator-Pattern}
 „Decorator fügt einem Objekt dynamisch zusätzliche Verantwortlichkeiten hinzu. Dekorierer bieten eine flexible Alternative zur Ableitung von Unterklassen zum Zweck der Erweiterung der Funktionalität“
@@ -89,6 +94,7 @@ class Color
 %
 \section{Wrapperklassen}
 \begin{tabular}{|l|l|}
+\hline
 \textbf{Primitiver Typ} & \textbf{Wrapper-KLasse}\\\hline
 byte & Byte \\\hline
 short & Short \\\hline
@@ -99,6 +105,7 @@ float & Float \\\hline
 char & Character \\\hline
 void & Void \\\hline
 \end{tabular}
+\\
 Wrapper-Objekte können auf drei Arten entstehen:
 \begin{itemize}
 \item Durch Aufruf einer statischen valueOf()-Methode der Wrapper-Klasse, der ein primitiver Ausdruck oder ein String übergeben wird
@@ -225,6 +232,7 @@ Contravarianz & C<? super B> & verboten & erlaubt & B und Basistypen\\\hline
 \item Testfall C$_{3}$a \\ Jede atomare Bedinung soll einmal true und einmal false annehmen
 \item Testfall C$_{3}$b \\ jede Kombination atomarer Bedingungen soll getestet werden.
 \item Testfall C$_{3}$c \\ jede atomare Bedingung und jede kombinierte Bedingung soll einaml true und einmal falls annehmen
+\end{itemize}
 %
 %
 %
@@ -256,4 +264,19 @@ public void test10()
 %
 %
 \section{GUI}
+
 \section{Threads}
+Aufgaben aus der Dropbox anschauen.
+Threads können in Java traditionell auf zwei Arten erzeugt werden
+\begin{itemize}
+	\item Ableitung von der Klasse java.lang.Thread
+	\begin{itemize}
+	\item Vorteil: geringfügig leichtere Implementierung 
+	\item Nachteil: keine Ableitung von der anderer KLasse mehr möglich
+	\end{itemize}
+	\item Implementierung:
+	\begin{itemize}
+	\item Vorteil: kann mit weiterer Ableitung kombinitert werden, Threads können wiederverwendet werden
+	\item Nachteil: geringfügig komplexere Implementierung
+	\end{itemize}
+\end{itemize}
